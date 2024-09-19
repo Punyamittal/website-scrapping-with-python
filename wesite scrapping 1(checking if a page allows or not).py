@@ -1,3 +1,4 @@
+#checking if website allows scrapping or not
 from urllib import robotparser
 robot_parser=robotparser.RobotFileParser()#robotparser module allows you to check rules from robots.txt file
 def prepare(robots_txt_url):
