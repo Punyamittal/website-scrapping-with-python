@@ -1,0 +1,10 @@
+def extract_links():
+    if not page:
+        return[]
+    link_regex=re.compile('<a[^>]+href=["\'](.*?)["\']',re.IGNORECASE)
+    return[urljoin(page,link) fir link i link_regex.findall(page)]
+def get_links:
+    host=urlparse(page_url)[1]
+    page=download_page(page_url)
+    links=extract_links(page)
+    return[link for link in links if urlparse(link)[1]==host]
